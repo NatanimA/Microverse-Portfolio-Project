@@ -1,0 +1,274 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+body.active {
+  overflow-y: hidden;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  background-color: #fff;
+  padding: 20px 36px 15px 24px;
+  box-sizing: border-box;
+  z-index: 1;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#headline {
+  margin: 0 auto;
+  background: #fff url(../assets/mobile.png) 0 45px no-repeat;
+  border-bottom-left-radius: 80px;
+  width: 375px;
+  height: 700px;
+}
+
+.header {
+  color: #172b4d;
+  padding: 128px 24px 0;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 52px;
+}
+
+.description {
+  color: #344563;
+  margin: 12px 24px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.connect {
+  color: #7f8cff;
+  margin-left: 24px;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.social-links {
+  padding-left: 0;
+  width: 160px;
+  display: flex;
+  list-style-type: none;
+  animation: width-change 1s ease-in-out 0.5s 1;
+  justify-content: space-between;
+  margin-left: 24px;
+}
+
+.social-media-link {
+  text-decoration: none;
+  color: #505f79;
+}
+
+.social-media-link i:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+li {
+  display: list-item;
+}
+
+#logo-natanim {
+  font-size: 18px;
+  color: #6070ff;
+  width: 76px;
+  height: 20px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+nav {
+  display: block;
+}
+
+#nav-menu {
+  display: none;
+}
+
+#mobile-navbar {
+  transition: all 0.3s ease-in-out;
+  background-color: transparent;
+}
+
+#mobile-nav-menu {
+  display: none;
+}
+
+#mobile-navbar.active {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(96, 112, 255, 0.9);
+  z-index: 1;
+}
+
+#mobile-navbar.active #mobile-nav-menu {
+  gap: 20px;
+  justify-content: space-between;
+  margin-top: 80px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}
+
+#hamb {
+  display: block;
+  cursor: pointer;
+}
+
+#hamb.active {
+  float: right;
+  margin-top: 20px;
+  margin-right: 35px;
+}
+
+#headline.active {
+  filter: blur(4px);
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: #6070ff;
+}
+
+#hamb.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+  background-color: #fff;
+}
+
+#hamb.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+#hamb.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+  background-color: #fff;
+}
+
+.mobile-nav-link a {
+  text-decoration: none;
+  color: #6070ff;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+@keyframes width-change {
+  from {
+    width: 250px;
+  }
+
+  to {
+    width: 160px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    width: 100vw;
+  }
+
+  header {
+    width: 100%;
+    position: fixed;
+    background-color: #fff;
+    padding-top: 0;
+    padding-bottom: 5px;
+  }
+
+  #hamb {
+    display: none;
+  }
+
+  #logo-natanim {
+    margin-left: 150px;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  #logo-natanim:hover {
+    transform: scale(1.1);
+  }
+
+  #nav-menu {
+    width: 235px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 164px;
+  }
+
+  .nav-link {
+    list-style-type: none;
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  .nav-link a {
+    text-decoration: none;
+    color: #344563;
+    padding-bottom: 5px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .nav-link a:hover {
+    color: #6070ff;
+  }
+
+  .nav-link a::after {
+    display: block;
+    content: '';
+    border-bottom: solid 3px #6070ff;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .nav-link a:hover::after {
+    transform: scaleX(1);
+  }
+
+  #headline {
+    width: 100vw;
+    height: 916px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff url(../assets/desktop.png) 100% 118px no-repeat;
+    background-size: contain;
+    border-bottom-left-radius: 150px;
+  }
+
+  #headline-content {
+    width: 63.8%;
+    margin-top: 238px;
+  }
+
+  #headline .header {
+    font-size: 48px;
+    line-height: 60px;
+    margin-top: 0;
+  }
+
+  .description {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .connect {
+    font-size: 16px;
+    margin-top: 40px;
+  }
+}
