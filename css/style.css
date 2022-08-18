@@ -99,6 +99,10 @@ nav {
   background-color: transparent;
 }
 
+#mobile-nav-menu {
+  display: none;
+}
+
 #mobile-navbar.active {
   width: 100%;
   height: 100%;
@@ -134,20 +138,6 @@ nav {
   filter: blur(4px);
 }
 
-#hamb.active .bar:nth-child(2) {
-  opacity: 0;
-}
-
-#hamb.active .bar:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
-  background-color: #fff;
-}
-
-#hamb.active .bar:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
-  background-color: #fff;
-}
-
 .bar {
   display: block;
   width: 25px;
@@ -157,8 +147,18 @@ nav {
   background-color: #6070ff;
 }
 
-#mobile-nav-menu {
-  display: none;
+#hamb.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+  background-color: #fff;
+}
+
+#hamb.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+#hamb.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+  background-color: #fff;
 }
 
 .mobile-nav-link a {
@@ -271,5 +271,4 @@ nav {
     font-size: 16px;
     margin-top: 40px;
   }
-
 }
