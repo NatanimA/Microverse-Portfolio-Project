@@ -58,7 +58,7 @@ header {
   width: 160px;
   display: flex;
   list-style-type: none;
-  animation: width-change 1s ease-in-out 0.5s 1;
+  animation: width-change 1s ease-in-out 0.5s 0.8;
   justify-content: space-between;
   margin-left: 24px;
 }
@@ -178,6 +178,129 @@ nav {
   }
 }
 
+#work {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto auto;
+  width: 100vw;
+  justify-content: center;
+  margin-top: 26px;
+}
+
+.proj-lang {
+  display: flex;
+  row-gap: 5px;
+  justify-content: space-between;
+  width: 203px;
+  flex-wrap: wrap;
+  margin: 12px 108px 0 16px;
+  padding: 0;
+  align-content: space-between;
+  list-style-type: none;
+}
+
+.lang {
+  color: #6070ff;
+  padding: 4px 12px;
+  font-size: 13px;
+  line-height: 15px;
+  background-color: #ebebff;
+  border-radius: 9px;
+}
+
+#skills-container ul {
+  padding-left: 0;
+}
+
+#skills-container li:nth-of-type(1) {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+#skills-container li:nth-of-type(2) {
+  list-style-type: none;
+}
+
+.skill-lang {
+  flex-direction: row;
+  margin-left: 20px;
+}
+
+.lang-logo {
+  margin-right: 16px;
+}
+
+#skills-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 48px;
+}
+
+.skill {
+  width: 325px;
+  list-style-type: none;
+  font-size: 21px;
+  font-weight: 450;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #dfe1e6;
+  box-sizing: border-box;
+  cursor: pointer;
+  padding: 23px 42px 23px 12px;
+}
+
+.enabled-btn {
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  color: #396df2;
+  background-color: #fff;
+  border: 1px solid #7f8cfa;
+  border-radius: 8px;
+  box-sizing: border-box;
+  align-self: flex-start;
+  margin: 24px 0 0 16px;
+  padding: 12px;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.enabled-btn:hover {
+  background-color: #6070ff;
+  color: #fff;
+  box-shadow: 0 8px 16px rgba(64, 83, 252, 0.24);
+}
+
+.enabled-btn:active {
+  background-color: #131b6e;
+  color: #fff;
+}
+
+.enabled-btn:disabled {
+  cursor: default;
+  background-color: #fff;
+  color: #46505f;
+  border: 1px solid #46505f;
+}
+
+.proj-type,
+.proj-year {
+  color: #7a869a;
+}
+
+.proj-company {
+  color: #344563;
+}
+
+#about {
+  width: 500px;
+  background-color: #fff;
+  margin: 114px auto 0;
+  padding-bottom: 100px;
+}
+
 @media only screen and (min-width: 768px) {
   body {
     width: 100vw;
@@ -240,15 +363,19 @@ nav {
     transform: scaleX(1);
   }
 
-  #headline {
-    width: 100vw;
-    height: 916px;
+  .skill-lang .lang {
+    width: 303px;
+    height: 67px;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    background: #fff url(../assets/desktop.png) 100% 118px no-repeat;
-    background-size: contain;
-    border-bottom-left-radius: 150px;
+    list-style-type: none;
+    background-color: #f7f7f9;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #253858;
+    box-sizing: border-box;
+    margin-top: 12px;
   }
 
   #headline-content {
@@ -267,8 +394,100 @@ nav {
     line-height: 28px;
   }
 
-  .connect {
+  #work {
+    align-items: center;
+  }
+
+  .project {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 80vw;
+    height: auto;
+    padding: 24px;
+  }
+
+  .project-picture {
+    width: 45%;
+    height: auto;
+    margin: 0;
+  }
+
+  .proj-div {
+    width: 45%;
+    box-sizing: border-box;
+    margin: 48px 46px 0;
+  }
+
+  .proj-title {
+    font-size: 40px;
+  }
+
+  .proj-info {
+    width: 100%;
+    font-size: 18px;
+    justify-content: flex-start;
+  }
+
+  .proj-description {
     font-size: 16px;
+    line-height: 24px;
+  }
+
+  #about {
+    display: flex;
+    width: 100vw;
+    border-top-right-radius: 150px;
+  }
+
+  #intro {
+    width: 31%;
+    margin: 10% 0 0 10%;
+  }
+
+  #intro .header {
+    line-height: 52px;
+    font-size: 40px;
+    padding-top: 0;
+  }
+
+  #intro .description {
+    margin: 0;
+    padding: 12px 0 12px 24px;
+    line-height: 24px;
+    width: 100%;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+
+  .connect {
     margin-top: 40px;
+    font-size: 16px;
+  }
+
+  #intro .connect {
+    margin-top: 12px;
+  }
+
+  #intro .social-links {
+    margin-bottom: 0;
+  }
+
+  #intro .enabled-btn {
+    margin-top: 34px;
+  }
+
+  .skill {
+    width: 100%;
+    padding-left: 20px;
+  }
+
+  #skills-container ul {
+    width: 100%;
+  }
+
+  .skill-lang .lang img {
+    margin-bottom: 16px;
+    margin-right: 0;
   }
 }
