@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@700&display=swap');
+
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #f8f9fa;
@@ -174,7 +176,7 @@ nav {
   }
 
   to {
-    width: 160px;
+    width: 150px;
   }
 }
 
@@ -182,9 +184,9 @@ nav {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto auto auto auto;
-  width: 100vw;
   justify-content: center;
   margin-top: 26px;
+  width: 100vw;
 }
 
 .proj-lang {
@@ -223,11 +225,11 @@ nav {
 
 .skill-lang {
   flex-direction: row;
-  margin-left: 20px;
+  margin-left: 22px;
 }
 
 .lang-logo {
-  margin-right: 16px;
+  margin-right: 18px;
 }
 
 #skills-container {
@@ -295,199 +297,36 @@ nav {
 }
 
 #about {
-  width: 500px;
+  width: 375px;
   background-color: #fff;
+  border-top-right-radius: 80px;
   margin: 114px auto 0;
   padding-bottom: 100px;
 }
 
-@media only screen and (min-width: 768px) {
-  body {
-    width: 100vw;
-  }
+#about .header {
+  margin-top: 0;
+  padding-top: 114px;
+}
 
-  header {
-    width: 100%;
-    position: fixed;
-    background-color: #fff;
-    padding-top: 0;
-    padding-bottom: 5px;
-  }
+.project {
+  width: 330px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  margin: 88px 24px 0;
+  padding-bottom: 15px;
+  border: 2px solid #dfe1e6;
+  border-radius: 18px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.5s ease-in-out;
+}
 
-  #hamb {
-    display: none;
-  }
-
-  #logo-natanim {
-    margin-left: 150px;
-    transition: transform 0.4s ease-in-out;
-  }
-
-  #logo-natanim:hover {
-    transform: scale(1.1);
-  }
-
-  #nav-menu {
-    width: 235px;
-    display: flex;
-    justify-content: space-between;
-    margin-right: 164px;
-  }
-
-  .nav-link {
-    list-style-type: none;
-    font-size: 15px;
-    font-weight: 500;
-  }
-
-  .nav-link a {
-    text-decoration: none;
-    color: #344563;
-    padding-bottom: 5px;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .nav-link a:hover {
-    color: #6070ff;
-  }
-
-  .nav-link a::after {
-    display: block;
-    content: '';
-    border-bottom: solid 3px #6070ff;
-    transform: scaleX(0);
-    transition: transform 0.3s ease-in-out;
-  }
-
-  .nav-link a:hover::after {
-    transform: scaleX(1);
-  }
-
-  .skill-lang .lang {
-    width: 303px;
-    height: 67px;
-    display: flex;
-    align-items: center;
-    list-style-type: none;
-    background-color: #f7f7f9;
-    border-radius: 8px;
-    font-size: 15px;
-    font-weight: 500;
-    color: #253858;
-    box-sizing: border-box;
-    margin-top: 12px;
-  }
-
-  #headline-content {
-    width: 63.8%;
-    margin-top: 238px;
-  }
-
-  #headline .header {
-    font-size: 48px;
-    line-height: 60px;
-    margin-top: 0;
-  }
-
-  .description {
-    font-size: 20px;
-    line-height: 28px;
-  }
-
-  #work {
-    align-items: center;
-  }
-
-  .project {
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    width: 80vw;
-    height: auto;
-    padding: 24px;
-  }
-
-  .project-picture {
-    width: 45%;
-    height: auto;
-    margin: 0;
-  }
-
-  .proj-div {
-    width: 45%;
-    box-sizing: border-box;
-    margin: 48px 46px 0;
-  }
-
-  .proj-title {
-    font-size: 40px;
-  }
-
-  .proj-info {
-    width: 100%;
-    font-size: 18px;
-    justify-content: flex-start;
-  }
-
-  .proj-description {
-    font-size: 16px;
-    line-height: 24px;
-  }
-
-  #about {
-    display: flex;
-    width: 100vw;
-    border-top-right-radius: 150px;
-  }
-
-  #intro {
-    width: 31%;
-    margin: 10% 0 0 10%;
-  }
-
-  #intro .header {
-    line-height: 52px;
-    font-size: 40px;
-    padding-top: 0;
-  }
-
-  #intro .description {
-    margin: 0;
-    padding: 12px 0 12px 24px;
-    line-height: 24px;
-    width: 100%;
-    font-size: 16px;
-    box-sizing: border-box;
-  }
-
-  .connect {
-    margin-top: 40px;
-    font-size: 16px;
-  }
-
-  #intro .connect {
-    margin-top: 12px;
-  }
-
-  #intro .social-links {
-    margin-bottom: 0;
-  }
-
-  #intro .enabled-btn {
-    margin-top: 34px;
-  }
-
-  .skill {
-    width: 100%;
-    padding-left: 20px;
-  }
-
-  #skills-container ul {
-    width: 100%;
-  }
-
-  .skill-lang .lang img {
-    margin-bottom: 16px;
-    margin-right: 0;
-  }
+.project-picture {
+  width: 295px;
+  height: 220px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin: 16px 16px 12px;
 }
