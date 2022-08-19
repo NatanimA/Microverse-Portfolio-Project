@@ -201,11 +201,20 @@ nav {
   list-style-type: none;
 }
 
+.proj-description {
+  width: 295px;
+  color: #344563;
+  font-size: 15px;
+  line-height: 24px;
+  height: 76px;
+  margin: 20px 16px 0;
+}
+
 .lang {
   color: #6070ff;
   padding: 4px 12px;
-  font-size: 13px;
-  line-height: 15px;
+  font-size: 12px;
+  line-height: 16px;
   background-color: #ebebff;
   border-radius: 9px;
 }
@@ -224,19 +233,37 @@ nav {
 }
 
 .skill-lang {
-  flex-direction: row;
-  margin-left: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 24px 0;
+  padding-left: 0;
+}
+
+.skill-lang .lang {
+  width: 300px;
+  height: 70px;
+  align-items: center;
+  display: flex;
+  font-size: 18px;
+  font-weight: 500;
+  color: #253858;
+  box-sizing: border-box;
+  background-color: #f7f7f9;
+  border-radius: 8px;
+  margin-top: 12px;
+  list-style-type: none;
 }
 
 .lang-logo {
-  margin-right: 18px;
+  margin-right: 16px;
 }
 
 #skills-container {
   display: flex;
+  margin-top: 48px;
   flex-direction: column;
   align-items: center;
-  margin-top: 48px;
 }
 
 .skill {
@@ -293,7 +320,17 @@ nav {
 }
 
 .proj-company {
+  margin-left: 23px;
   color: #344563;
+}
+
+.proj-title {
+  width: 295px;
+  line-height: 44px;
+  color: #172b4d;
+  font-weight: 700;
+  font-size: 32px;
+  margin: 0 16px;
 }
 
 #about {
