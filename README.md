@@ -2,7 +2,7 @@
 
 # Microverse-Portfolio-Project
 
-> This is a project done for Microverse
+> This is a project I have done learning in microverse,I have used designs from figma to implement this project,If you like it please give it a Star.⭐️:wink:
 
 
 ## Built With
@@ -18,11 +18,13 @@
 
 
 To get a local copy up and running follow these simple example steps.
+**git clone  https://github.com/NatanimA/Microverse-Portfolio-Project.git**
 
 ### Prerequisites
 **No prerequisties needed**
 
 ### Setup
+
 
 
 ### Install
