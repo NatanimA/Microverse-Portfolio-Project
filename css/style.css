@@ -367,3 +367,51 @@ nav {
   object-fit: cover;
   margin: 16px 16px 12px;
 }
+
+#contacts {
+  background: #6070ff url(../assets/contac-form-shapes-mobile.png);
+  margin: 10px auto;
+  color: #fff;
+  margin-top: 70px;
+  border-top-left-radius: 80px;
+  width: 375px;
+  height: 750px;
+}
+
+.form-inputs {
+  margin: 18px 24px 10px 24px;
+  border: 1px solid #CFD8DC;
+  color: #172B4D;
+  border-radius: 8px;
+  height: 48px;
+}
+
+#form-message-input {
+  width: 327px;
+  height: 170px;
+  color: #B3BAC5;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+#contacts-header {
+  padding-top: 103px;
+  text-align: center;
+}
+
+#contacts .description p {
+  color: #EBEBFF;
+  font-style: normal;
+  font-weight: 350;
+  font-size: 15px;
+  text-align: center;
+  line-height: 28px;
+}
+
+#form-wrapper {
+  margin-top: 20px;
+  margin-bottom: 45px;
+  display: flex;
+  flex-direction: column;
+}
