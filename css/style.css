@@ -473,17 +473,23 @@ nav {
  }
 
  .project {
-   width: 80vw;
+   width: 1156px;
    height: auto;
+   display: flex;
    flex-direction: row;
    justify-content: flex-start;
    align-items: flex-start;
+   margin-left: 150px;
    padding: 24px;
  }
 
+ #proj-picture-2 {
+  flex-direction: row-reverse;
+ }
+
  .project-picture {
-   width: 45%;
-   height: auto;
+   width: 544px;
+   height: 448px;
    margin: 0;
  }
 
@@ -570,22 +576,5 @@ nav {
    margin-right: 0;
  }
 
- #content .proj-info {
-   margin-left: 16px;
- }
-
- #pop-img {
-   width: 100%;
-   height: 500px;
-   object-fit: cover;
-   margin-top: 20px;
- }
-
- #pop-details {
-   display: flex;
- }
-
- #pop-description {
-   width: 80%;
- }
+ 
 }
