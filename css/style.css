@@ -456,7 +456,7 @@ textarea::placeholder {
   }
 
   #headline {
-    width: 1440px;
+    width: 100vw;
     height: 916px;
     display: flex;
     flex-direction: column;
@@ -665,8 +665,50 @@ textarea::placeholder {
   margin-left: 3px;
  }
 
- 
+ #contacts {
+  background:#6070ff url(../assets/contact-form-background-shape-desktop.png) no-repeat;
+  display: flex;
+  width: 100vw;
+  margin-top: 0%;
+  border-top-left-radius: 200px;
+ }
+
+ #contacts .description {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  color: #ebebff;
+  width: 569px;
+  height: 102px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-inputs {
+  width: 450px;
+}
+
+textarea {
+  resize: none;
+}
+
+#text-area {
+  width: 450px;
+  height: 170px;
+}
+
+#form-button {
+  width: 142px;
+  height: 48px;
+  align-self: center;
 }
 
 
 
+}
