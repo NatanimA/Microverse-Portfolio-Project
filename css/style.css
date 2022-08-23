@@ -373,11 +373,12 @@ nav {
   flex-direction: column;
   align-items: center;
   background: #6070ff url(../assets/contac-form-shapes-mobile.png);
+  margin: 10px auto;
   color: #fff;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: top right;
+  margin-top: 70px;
   border-top-left-radius: 80px;
+  width: 375px;
+  height: 750px;
 }
 
 .form-inputs {
