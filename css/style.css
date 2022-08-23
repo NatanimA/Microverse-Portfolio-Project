@@ -378,13 +378,6 @@ nav {
   background-size: contain;
   background-position: top right;
   border-top-left-radius: 80px;
-  /* background: #6070ff url(../assets/contac-form-shapes-mobile.png);
-  margin: 10px auto;
-  color: #fff;
-  margin-top: 70px;
-  border-top-left-radius: 80px;
-  width: 375px;
-  height: 750px; */
 }
 
 .form-inputs {
@@ -413,8 +406,6 @@ nav {
   margin-top: 95px;
   margin-bottom: 6px;
   align-self: center;
-  /* padding-top: 103px;
-  text-align: center; */
 }
 
 #contacts .description p {
