@@ -405,8 +405,16 @@ nav {
 }
 
 #contacts-header {
-  padding-top: 103px;
-  text-align: center;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 44px;
+  color: #fff;
+  margin-top: 95px;
+  margin-bottom: 6px;
+  align-self: center;
+  /* padding-top: 103px;
+  text-align: center; */
 }
 
 #contacts .description p {
