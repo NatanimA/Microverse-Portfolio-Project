@@ -381,9 +381,9 @@ nav {
 }
 
 .form-inputs {
-  margin: 18px 24px 0px 24px;
-  border: 1px solid #CFD8DC;
-  color: #172B4D;
+  margin: 18px 24px 0 24px;
+  border: 1px solid #cfd8dc;
+  color: #172b4d;
   border-radius: 8px;
   height: 48px;
 }
@@ -391,7 +391,7 @@ nav {
 #form-message-input {
   width: 327px;
   height: 170px;
-  color: #B3BAC5;
+  color: #b3bac5;
   font-weight: 400;
   font-size: 15px;
   line-height: 24px;
@@ -409,7 +409,7 @@ nav {
 }
 
 #contacts .description p {
-  color: #EBEBFF;
+  color: #ebebff;
   font-style: normal;
   font-weight: 350;
   font-size: 15px;
