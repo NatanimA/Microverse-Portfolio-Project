@@ -559,7 +559,7 @@ textarea::placeholder {
    padding: 24px;
  }
 
- #proj-picture-2 {
+ .proj-picture-2 {
   flex-direction: row-reverse;
  }
 
@@ -698,7 +698,7 @@ textarea {
   resize: none;
 }
 
-#text-area {
+#form-message-input {
   width: 450px;
   height: 170px;
 }
