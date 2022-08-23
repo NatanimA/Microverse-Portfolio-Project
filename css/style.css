@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400&display=swap');
 
 body {
   font-family: 'Poppins', sans-serif;
@@ -366,4 +366,81 @@ nav {
   border-radius: 8px;
   object-fit: cover;
   margin: 16px 16px 12px;
+}
+
+#contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #6070ff url(../assets/contac-form-shapes-mobile.png);
+  margin: 10px auto;
+  color: #fff;
+  margin-top: 70px;
+  border-top-left-radius: 80px;
+  width: 375px;
+  height: 750px;
+}
+
+.form-inputs {
+  margin: 18px 24px 0 24px;
+  border: 1px solid #cfd8dc;
+  color: #172b4d;
+  border-radius: 8px;
+  height: 48px;
+}
+
+input::placeholder {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  padding-left: 16px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  color: #172b4d;
+}
+
+textarea::placeholder {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #b3bac5;
+  padding-top: 15px;
+  padding-left: 16px;
+}
+
+#form-message-input {
+  width: 327px;
+  height: 170px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+#contacts-header {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 44px;
+  color: #fff;
+  margin-top: 95px;
+  margin-bottom: 6px;
+  align-self: center;
+}
+
+#contacts .description p {
+  color: #ebebff;
+  font-style: normal;
+  font-weight: 350;
+  font-size: 15px;
+  text-align: center;
+  line-height: 28px;
+}
+
+#form-wrapper {
+  margin-top: 20px;
+  margin-bottom: 45px;
+  display: flex;
+  flex-direction: column;
 }
