@@ -369,13 +369,22 @@ nav {
 }
 
 #contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background: #6070ff url(../assets/contac-form-shapes-mobile.png);
+  color: #fff;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top right;
+  border-top-left-radius: 80px;
+  /* background: #6070ff url(../assets/contac-form-shapes-mobile.png);
   margin: 10px auto;
   color: #fff;
   margin-top: 70px;
   border-top-left-radius: 80px;
   width: 375px;
-  height: 750px;
+  height: 750px; */
 }
 
 .form-inputs {
