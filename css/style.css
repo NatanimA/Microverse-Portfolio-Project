@@ -390,7 +390,7 @@ nav {
 }
 
 input::placeholder {
-  font-family: 'Poppins';
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   padding-left: 16px;
   font-weight: 400;
@@ -400,7 +400,7 @@ input::placeholder {
 }
 
 textarea::placeholder {
-  font-family: 'Poppins';
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
