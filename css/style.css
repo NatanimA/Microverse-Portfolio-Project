@@ -215,6 +215,7 @@ nav {
   padding: 4px 12px;
   font-size: 12px;
   line-height: 16px;
+  margin-top: 10px;
   background-color: #ebebff;
   border-radius: 9px;
 }
@@ -334,11 +335,11 @@ nav {
 }
 
 #about {
-  width: 375px;
-  background-color: #fff;
+  width: 100vw;
   border-top-right-radius: 80px;
-  margin: 114px auto 0;
+  margin: 114px 0 0;
   padding-bottom: 100px;
+  background: #FFFFFF;
 }
 
 #about .header {
@@ -398,7 +399,7 @@ nav {
  }
 
  #logo-natanim:hover {
-   transform: scale(1.1);
+   transform: scale(1.3);
  }
 
  #nav-menu {
@@ -477,9 +478,8 @@ nav {
    height: auto;
    display: flex;
    flex-direction: row;
-   justify-content: flex-start;
-   align-items: flex-start;
-   margin-left: 150px;
+   margin-left: 142px;
+   margin-right: 142px;
    padding: 24px;
  }
 
@@ -496,10 +496,11 @@ nav {
  .proj-div {
    width: 45%;
    box-sizing: border-box;
-   margin: 48px 46px 0;
+   margin: 0px 46px 0;
  }
 
  .proj-title {
+   width: 496px;
    font-size: 40px;
  }
 
@@ -574,6 +575,18 @@ nav {
  .skill-lang .lang img {
    margin-bottom: 16px;
    margin-right: 0;
+ }
+
+ .proj-lang {
+  width: 350px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: flex-start;
+ }
+
+ .lang {
+  margin-top: 10px;
+  margin-left: 3px;
  }
 
  
