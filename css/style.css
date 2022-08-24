@@ -650,7 +650,6 @@ textarea::placeholder {
   .skill-lang {
     display: flex;
     flex-direction: row;
-
   }
 
   #skills-container {
