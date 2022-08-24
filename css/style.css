@@ -516,13 +516,16 @@ textarea::placeholder {
   }
 
   .lang {
+    display: flex;
+    flex-direction: column;
     margin-top: 10px;
     margin-left: 3px;
+    padding-right: 12px;
   }
 
   .skill-lang .lang {
-    width: 303px;
-    height: 67px;
+    width: 122px;
+    height: 120px;
     display: flex;
     align-items: center;
     list-style-type: none;
@@ -644,9 +647,17 @@ textarea::placeholder {
     padding-left: 20px;
   }
 
+  .skill-lang {
+    display: flex;
+    flex-direction: row;
+
+  }
+
   #skills-container {
     margin-left: 200px;
     margin-top: 100px;
+    width: 684px;
+    height: 360px;
   }
 
   #skills-container ul {
