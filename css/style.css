@@ -677,6 +677,7 @@ textarea::placeholder {
 
   #contacts {
     background: #6070ff url(../assets/contact-form-background-shape-desktop.png) no-repeat;
+    background-size: 100% 80%;
     display: flex;
     width: 100vw;
     margin-top: 0%;
