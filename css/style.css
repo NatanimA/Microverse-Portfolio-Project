@@ -462,7 +462,8 @@ textarea::placeholder {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #fff url(../assets/desktop.png) 100% 118px no-repeat;
+    background: #fff url(../assets/desktop.svg) no-repeat;
+    background-size: 100%;
     border-bottom-left-radius: 150px;
   }
 
@@ -539,8 +540,8 @@ textarea::placeholder {
   }
 
   #headline-content {
-    width: 63.8%;
     margin-top: 238px;
+    width: 920px;
   }
 
   #headline .header {
