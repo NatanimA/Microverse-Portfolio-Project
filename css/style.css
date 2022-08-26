@@ -215,6 +215,7 @@ nav {
   padding: 4px 12px;
   font-size: 12px;
   line-height: 16px;
+  margin-top: 10px;
   background-color: #ebebff;
   border-radius: 9px;
 }
@@ -334,11 +335,11 @@ nav {
 }
 
 #about {
-  width: 375px;
-  background-color: #fff;
+  width: 100vw;
   border-top-right-radius: 80px;
-  margin: 114px auto 0;
+  margin: 114px 0 0;
   padding-bottom: 100px;
+  background: #fff;
 }
 
 #about .header {
@@ -443,4 +444,280 @@ textarea::placeholder {
   margin-bottom: 45px;
   display: flex;
   flex-direction: column;
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    width: 100vw;
+  }
+
+  .header {
+    width: 100%;
+    background-color: #fff;
+  }
+
+  #headline {
+    width: 100vw;
+    height: 916px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff url(../assets/desktop.svg) no-repeat;
+    background-size: 100%;
+    border-bottom-left-radius: 150px;
+  }
+
+  #mobile-navbar {
+    display: none;
+  }
+
+  #logo-natanim {
+    margin-left: 150px;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  #logo-natanim:hover {
+    transform: scale(1.3);
+  }
+
+  #nav-menu {
+    width: 235px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 164px;
+  }
+
+  .nav-link {
+    list-style-type: none;
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  .nav-link a {
+    text-decoration: none;
+    color: #344563;
+    padding-bottom: 5px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .nav-link a:hover {
+    color: #6070ff;
+  }
+
+  .nav-link a::after {
+    display: block;
+    content: '';
+    border-bottom: solid 3px #6070ff;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .nav-link a:hover::after {
+    transform: scaleX(1);
+  }
+
+  .lang {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-left: 3px;
+    padding-right: 12px;
+  }
+
+  .skill-lang .lang {
+    width: 122px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    background-color: #f7f7f9;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #253858;
+    box-sizing: border-box;
+    margin-top: 12px;
+  }
+
+  #headline-content {
+    margin-top: 238px;
+    width: 920px;
+  }
+
+  #headline .header {
+    font-size: 48px;
+    line-height: 60px;
+    margin-top: 0;
+  }
+
+  .description {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  #work {
+    align-items: center;
+  }
+
+  .project {
+    width: 1156px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    margin-left: 142px;
+    margin-right: 142px;
+    padding: 24px;
+  }
+
+  .proj-picture-2 {
+    flex-direction: row-reverse;
+  }
+
+  .project-picture {
+    width: 544px;
+    height: 448px;
+    margin: 0;
+  }
+
+  .proj-div {
+    width: 45%;
+    box-sizing: border-box;
+  }
+
+  .proj-title {
+    width: 496px;
+    font-size: 40px;
+  }
+
+  .proj-info {
+    width: 100%;
+    font-size: 18px;
+    justify-content: flex-start;
+  }
+
+  .proj-description {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  #about {
+    display: flex;
+    width: 100vw;
+    border-top-right-radius: 150px;
+  }
+
+  #intro {
+    width: 31%;
+    margin: 10% 0 0 10%;
+  }
+
+  #intro .header {
+    line-height: 52px;
+    font-size: 40px;
+    padding-top: 0;
+  }
+
+  #intro .description {
+    margin: 0;
+    padding: 12px 0 12px 24px;
+    line-height: 24px;
+    width: 100%;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+
+  .connect {
+    margin-top: 40px;
+    font-size: 16px;
+  }
+
+  #intro .connect {
+    margin-top: 12px;
+  }
+
+  #intro .social-links {
+    margin-bottom: 0;
+  }
+
+  #intro .enabled-btn {
+    margin-top: 34px;
+  }
+
+  .skill {
+    width: 100%;
+    padding-left: 20px;
+  }
+
+  .skill-lang {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #skills-container {
+    margin-left: 200px;
+    margin-top: 100px;
+    width: 684px;
+    height: 360px;
+  }
+
+  #skills-container ul {
+    width: 100%;
+  }
+
+  .skill-lang .lang img {
+    margin-bottom: 16px;
+    margin-right: 0;
+  }
+
+  .proj-lang {
+    width: 350px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  #contacts {
+    background: #6070ff url(../assets/contact-form-background-shape-desktop.png) no-repeat;
+    background-size: 100% 80%;
+    display: flex;
+    width: 100vw;
+    margin-top: 0%;
+    border-top-left-radius: 200px;
+  }
+
+  #contacts .description {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    color: #ebebff;
+    width: 569px;
+    height: 102px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-inputs {
+    width: 450px;
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  #form-message-input {
+    width: 450px;
+    height: 170px;
+  }
+
+  #form-button {
+    width: 142px;
+    height: 48px;
+    align-self: center;
+  }
 }
