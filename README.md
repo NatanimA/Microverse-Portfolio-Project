@@ -37,6 +37,9 @@ To get a local copy up and running follow these simple example steps.
 - GitHub: [@github](https://https://github.com/NatanimA)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/natanim-abesha-04a39823a)
 
+##Live Demo
+- https://natanima.github.io/Microverse-Portfolio-Project/
+
 
 ## 🤝 Contributing
 
