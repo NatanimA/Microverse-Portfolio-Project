@@ -3,7 +3,7 @@
 # Microverse-Portfolio-Project
 
 > This is a project I have done learning in microverse,I have used designs from figma to implement this project,If you like it please give it a Star.⭐️:wink:
-
+![](assets/NatanimPortfolio.png)
 
 ## Built With
 
@@ -37,7 +37,7 @@ To get a local copy up and running follow these simple example steps.
 - GitHub: [@github](https://https://github.com/NatanimA)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/natanim-abesha-04a39823a)
 
-##Live Demo
+## Live Demo
 - https://natanima.github.io/Microverse-Portfolio-Project/
 
 
