@@ -12,7 +12,7 @@ body.active {
 }
 
 header {
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
   display: flex;
@@ -53,6 +53,10 @@ header {
   font-size: 16px;
   font-weight: 500;
   margin-bottom: 12px;
+}
+
+label {
+  display: none;
 }
 
 .social-links {
