@@ -720,4 +720,18 @@ textarea::placeholder {
     height: 48px;
     align-self: center;
   }
+
+  h1.header {
+    animation: heading 3s linear;
+    position: relative;
+  }
+  @keyframes heading {
+    from {
+      left: 0;
+    }
+
+    to {
+      left: 100%;
+    }
+  }
 }
