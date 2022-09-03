@@ -24,6 +24,7 @@ header {
   align-items: center;
 }
 
+
 #headline {
   margin: 0 auto;
   background: #fff url(../assets/mobile.png) 0 45px no-repeat;
@@ -65,6 +66,7 @@ header {
   margin-left: 24px;
 }
 
+
 .social-media-link {
   text-decoration: none;
   color: #505f79;
@@ -104,6 +106,7 @@ nav {
 #mobile-nav-menu {
   display: none;
 }
+
 
 #mobile-navbar.active {
   width: 100%;
@@ -165,7 +168,7 @@ nav {
 
 .mobile-nav-link a {
   text-decoration: none;
-  color: #6070ff;
+  color: #fff;
   font-size: 32px;
   font-weight: 600;
 }
