@@ -165,7 +165,7 @@ nav {
 
 .mobile-nav-link a {
   text-decoration: none;
-  color: #6070ff;
+  color: #fff;
   font-size: 32px;
   font-weight: 600;
 }
@@ -677,7 +677,8 @@ textarea::placeholder {
   }
 
   #contacts {
-    background: #6070ff url(../assets/contact-form-background-shape-desktop.png) no-repeat;
+    background: #6070ff url(../assets/contact-form-background-shape-desktop.png);
+    background-repeat: no-repeat;
     background-size: 100% 80%;
     display: flex;
     width: 100vw;
