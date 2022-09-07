@@ -85,16 +85,19 @@ header {
 }
 
 .proj-info {
-  width: 236px;
+  width: 280px;
   font-weight: 600;
   font-size: 13px;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  row-gap: 15px;
   margin: 20px 75px 0 16px;
 }
 
 #content .proj-info {
-  margin-left: 0;
+  display: flex;
+
 }
 
 #popbg {
