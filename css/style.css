@@ -728,14 +728,14 @@ textarea::placeholder {
     resize: none;
   }
 
-    #error-msg {
-      font-size: 16px;
-      height: auto;
-      color: darkred;
-      font-weight: 600;
-      margin-top: 2px;
-      align-self: flex-start;
-    }
+  #error-msg {
+    font-size: 16px;
+    height: auto;
+    color: darkred;
+    font-weight: 600;
+    margin-top: 2px;
+    align-self: flex-start;
+  }
 
   #form-message-input {
     width: 450px;
