@@ -12,7 +12,7 @@ body.active {
   display: inline;
 }
 
-.project-cards{
+.project-cards {
   display: none;
 }
 
@@ -84,17 +84,17 @@ header {
   border-radius: 50%;
 }
 
-#content .proj-info {
-  margin-left: 0;
-}
-
 .proj-info {
   width: 236px;
+  font-weight: 600;
   font-size: 13px;
   display: flex;
   justify-content: space-between;
-  font-weight: 600;
   margin: 20px 75px 0 16px;
+}
+
+#content .proj-info {
+  margin-left: 0;
 }
 
 #popbg {
@@ -125,7 +125,6 @@ header {
   width: 70%;
 }
 
-
 #details {
   margin-top: 30px;
 }
@@ -144,15 +143,67 @@ header {
   border-radius: 8px;
 }
 
+.enabled-btn {
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  color: #396df2;
+  background-color: #fff;
+  border: 1px solid #7f8cfa;
+  border-radius: 8px;
+  box-sizing: border-box;
+  align-self: flex-start;
+  margin: 24px 0 0 16px;
+  padding: 12px;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.enabled-btn:hover {
+  background-color: #6070ff;
+  color: #fff;
+  box-shadow: 0 8px 16px rgba(64, 83, 252, 0.24);
+}
+
+.enabled-btn:active {
+  background-color: #131b6e;
+  color: #fff;
+}
+
+.enabled-btn:disabled {
+  cursor: default;
+  background-color: #fff;
+  color: #46505f;
+  border: 1px solid #46505f;
+}
+
 #content .enabled-btn {
   font-size: 15px;
   margin-top: 0;
+}
+
+.social-media-link i:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s ease-in-out;
 }
 
 #content .enabled-btn i {
   width: 16px;
   height: 16px;
   padding-left: 10px;
+}
+
+.proj-lang {
+  width: 203px;
+  flex-wrap: wrap;
+  margin: 10px 105px 0 15px;
+  padding: 0;
+  align-content: space-between;
+  display: flex;
+  row-gap: 5px;
+  justify-content: space-between;
+  list-style-type: none;
 }
 
 #content .proj-lang {
@@ -210,11 +261,6 @@ header {
 .social-media-link {
   text-decoration: none;
   color: #505f79;
-}
-
-.social-media-link i:hover {
-  transform: scale(1.2);
-  transition: transform 0.3s ease-in-out;
 }
 
 li {
@@ -331,18 +377,6 @@ nav {
   width: 100vw;
 }
 
-.proj-lang {
-  display: flex;
-  row-gap: 5px;
-  justify-content: space-between;
-  width: 203px;
-  flex-wrap: wrap;
-  margin: 12px 108px 0 16px;
-  padding: 0;
-  align-content: space-between;
-  list-style-type: none;
-}
-
 .proj-description {
   width: 295px;
   color: #344563;
@@ -420,41 +454,6 @@ nav {
   box-sizing: border-box;
   cursor: pointer;
   padding: 23px 42px 23px 12px;
-}
-
-.enabled-btn {
-  cursor: pointer;
-  font-family: inherit;
-  font-size: 17px;
-  font-weight: 500;
-  letter-spacing: 0.03em;
-  color: #396df2;
-  background-color: #fff;
-  border: 1px solid #7f8cfa;
-  border-radius: 8px;
-  box-sizing: border-box;
-  align-self: flex-start;
-  margin: 24px 0 0 16px;
-  padding: 12px;
-  transition: background-color 0.5s, color 0.5s;
-}
-
-.enabled-btn:hover {
-  background-color: #6070ff;
-  color: #fff;
-  box-shadow: 0 8px 16px rgba(64, 83, 252, 0.24);
-}
-
-.enabled-btn:active {
-  background-color: #131b6e;
-  color: #fff;
-}
-
-.enabled-btn:disabled {
-  cursor: default;
-  background-color: #fff;
-  color: #46505f;
-  border: 1px solid #46505f;
 }
 
 .proj-type,
@@ -726,53 +725,47 @@ textarea::placeholder {
     box-sizing: border-box;
   }
 
-    #content {
-      width: 70%;
-      padding: 24px 24px 40px;
-      margin: 77px auto;
-    }
-  
-    #title {
-      padding-left: 16px;
-      padding-right: 30px;
-    }
-  
-    #pop-img {
-      width: 100%;
-      height: 500px;
-      object-fit: cover;
-      margin-top: 20px;
-    }
-  
-    #content .proj-info {
-      margin-left: 16px;
-    }
-  
-    #popup-details {
-      display: flex;
-    }
-  
-    #popup-description {
-      width: 80%;
-    }
-  
-    #popup-skills-buttons {
-      padding-left: 20px;
-    }
-  
-    .live-link {
-      margin-left: 0;
-    }
+  #content {
+    width: 70%;
+    padding: 24px 24px 40px;
+    margin: 77px auto;
+  }
+
+  #title {
+    padding-left: 16px;
+    padding-right: 30px;
+  }
+
+  #pop-img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    margin-top: 20px;
+  }
+
+  #content .proj-info {
+    margin-left: 16px;
+  }
+
+  #popup-details {
+    display: flex;
+  }
+
+  #popup-description {
+    width: 80%;
+  }
+
+  #popup-skills-buttons {
+    padding-left: 20px;
+  }
+
+  .live-link {
+    margin-left: 0;
+  }
 
   .proj-title {
     width: 496px;
     font-size: 40px;
-  }
-
-  .proj-info {
-    width: 100%;
-    font-size: 18px;
-    justify-content: flex-start;
   }
 
   .proj-description {

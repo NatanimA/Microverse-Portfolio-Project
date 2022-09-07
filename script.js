@@ -53,9 +53,9 @@ const projects = [
   {
     name: 'Uber Navigations',
     description: 'A smart assistant to make driving more safe, efficient, and fun by unlocking your most expensive computer: your car.',
-    projtype:'Lead Developer',
-    projYear:'2018',
-    projCompany:'Uber',
+    projtype: 'Lead Developer',
+    projYear: '2018',
+    projCompany: 'Uber',
     image: './assets/SnapshootPortfolio4.png',
     technologies: ['html', 'ruby on rails', 'css', 'javascript'],
     'live link': 'https://natanima.github.io/Microverse-Portfolio-Project/',
@@ -73,7 +73,6 @@ projects.forEach((project) => {
 const ul = document.createElement('ul');
 ul.className = 'proj-lang';
 skillsList.prepend(ul);
-
 
 function popupDetailsWindow(index) {
   ul.innerHTML = '';
@@ -106,7 +105,6 @@ close.addEventListener('click', () => {
   body.classList.remove('active');
   bg.classList.remove('active');
 });
-
 
 hamburger.addEventListener('click', () => {
   headline.classList.toggle('active');
