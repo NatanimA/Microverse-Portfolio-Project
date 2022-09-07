@@ -97,7 +97,6 @@ header {
 
 #content .proj-info {
   display: flex;
-
 }
 
 #popbg {
@@ -753,7 +752,6 @@ textarea::placeholder {
   #details {
     display: flex;
     flex-direction: row;
-
   }
 
   #pop-description {
@@ -770,10 +768,10 @@ textarea::placeholder {
     align-items: flex-end;
   }
 
-    #popup-skills-buttons #buttons{
-      width: 306px;
-      padding: 0;
-    }
+  #popup-skills-buttons #buttons {
+    width: 306px;
+    padding: 0;
+  }
 
   .live-link {
     margin-left: 0;
@@ -787,6 +785,13 @@ textarea::placeholder {
   .proj-description {
     font-size: 16px;
     line-height: 24px;
+  }
+
+  .proj-lang {
+    width: 350px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: flex-start;
   }
 
   #popup #content #details .proj-lang {
@@ -865,13 +870,6 @@ textarea::placeholder {
   .skill-lang .lang img {
     margin-bottom: 16px;
     margin-right: 0;
-  }
-
-  .proj-lang {
-    width: 350px;
-    margin-top: 40px;
-    display: flex;
-    justify-content: flex-start;
   }
 
   #contacts {
