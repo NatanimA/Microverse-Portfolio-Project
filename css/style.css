@@ -246,6 +246,24 @@ header {
   margin-bottom: 12px;
 }
 
+#email.active {
+  border: 2px solid red;
+  margin-bottom: 0;
+}
+
+#error-msg {
+  font-size: 10px;
+  height: auto;
+  color: darkred;
+  font-weight: 600;
+  margin-top: 2px;
+  align-self: flex-start;
+}
+
+small {
+  margin-left: 5%;
+}
+
 .social-links {
   padding-left: 0;
   width: 160px;
@@ -901,6 +919,15 @@ textarea::placeholder {
 
   textarea {
     resize: none;
+  }
+
+  #error-msg {
+    font-size: 16px;
+    height: auto;
+    color: darkred;
+    font-weight: 600;
+    margin-top: 2px;
+    align-self: flex-start;
   }
 
   #form-message-input {
