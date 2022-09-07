@@ -1,4 +1,3 @@
-
 const hamburger = document.querySelector('#hamb');
 const navBar = document.querySelector('#mobile-navbar');
 const body = document.querySelector('body');
@@ -10,33 +9,33 @@ const close = document.querySelector('.close-btn');
 const content = document.querySelector('#content h2');
 const popImg = document.querySelector('#pop-img');
 const popupProjType = document.querySelector('#content .proj-info .proj-type');
-const popupProjCompany = document.querySelector('#content .proj-info .proj-company');
+const popupProjCompany = document.querySelector(
+  '#content .proj-info .proj-company'
+);
 const popupProjYear = document.querySelector('#content .proj-info .proj-year');
 const popupDescription = document.querySelector('#pop-description');
 const liveLink = document.querySelector('.live-link');
 const sourceLink = document.querySelector('.source-link');
 const skillsList = document.querySelector('#popup-skills-buttons');
-const form = document.getElementById("form-wrapper");
-const error_msg = document.getElementById("error-msg");
+const form = document.getElementById('form-wrapper');
+const error_msg = document.getElementById('error-msg');
 
-form.addEventListener('submit',(event) => {
-    event.preventDefault();
-  if (event.target[1].value === event.target[1].value.toLowerCase()){
-        form.submit();
-    }
-    else {
-        email.classList.add('active');
-        error_msg.innerText = "Please Enter E-mail with lowercase like 'abcd@gmail.com'"
-
-    }
-
-}
-);
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  if (event.target[1].value === event.target[1].value.toLowerCase()) {
+    form.submit();
+  } else {
+    email.classList.add('active');
+    error_msg.innerText =
+      "Please Enter E-mail with lowercase like 'abcd@gmail.com'";
+  }
+});
 
 const projects = [
   {
     name: 'Tonic',
-    description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
+    description:
+      'A daily selection of privately personalized reads; no accounts or sign-ups required.',
     projtype: 'Back End Developer',
     projYear: '2015',
     projCompany: 'Tonic',
@@ -47,7 +46,8 @@ const projects = [
   },
   {
     name: 'Multi-Post Stories',
-    description: 'Experimental content creation feature that allows users to add to an existing story over the course of a day without spamming their friends.',
+    description:
+      'Experimental content creation feature that allows users to add to an existing story over the course of a day without spamming their friends.',
     projtype: 'Full Stack Dev',
     projYear: '2015',
     projCompany: 'Facebook',
@@ -58,7 +58,8 @@ const projects = [
   },
   {
     name: 'Facebook-360',
-    description: 'Exploring the future of media in Facebook first Virtual Reality app; a place to discover and enjoy 360 photos and videos on Gear VR.',
+    description:
+      'Exploring the future of media in Facebook first Virtual Reality app; a place to discover and enjoy 360 photos and videos on Gear VR.',
     projtype: 'Full Stack Dev',
     projYear: '2015',
     projCompany: 'Facebook',
@@ -69,7 +70,8 @@ const projects = [
   },
   {
     name: 'Uber Navigations',
-    description: 'A smart assistant to make driving more safe, efficient, and fun by unlocking your most expensive computer: your car.',
+    description:
+      'A smart assistant to make driving more safe, efficient, and fun by unlocking your most expensive computer: your car.',
     projtype: 'Lead Developer',
     projYear: '2018',
     projCompany: 'Uber',
@@ -83,7 +85,21 @@ const projects = [
 projects.forEach((project) => {
   const projectContainer = document.createElement('div');
   projectContainer.className = 'project';
-  projectContainer.innerHTML = `<img class="project-picture" src="${project.image}" alt="project screenshot"> <div class="proj-div"> <h2 class="proj-title">${project.name}</h2> <p class="proj-info"> <span class="proj-company">${project.projCompany}</span> <span><img src="./assets/Counter.png" alt=" "></span> <span class="proj-type">${project.projtype}</span> <span><img src="./assets/Counter.png" alt=" "></span> <span class="proj-year">${project.projYear}</span> </p> <p class="proj-description">${project.description}</p> <ul class="proj-lang">${project.technologies.map((tech) => `<li class='lang'>${tech}</li>`).join('')}</ul> <button class="enabled-btn">See Project</button> </div>`;
+  projectContainer.innerHTML = `<img class="project-picture" src="${
+    project.image
+  }" alt="project screenshot"> <div class="proj-div"> <h2 class="proj-title">${
+    project.name
+  }</h2> <p class="proj-info"> <span class="proj-company">${
+    project.projCompany
+  }</span> <span><img src="./assets/Counter.png" alt=" "></span> <span class="proj-type">${
+    project.projtype
+  }</span> <span><img src="./assets/Counter.png" alt=" "></span> <span class="proj-year">${
+    project.projYear
+  }</span> </p> <p class="proj-description">${
+    project.description
+  }</p> <ul class="proj-lang">${project.technologies
+    .map((tech) => `<li class='lang'>${tech}</li>`)
+    .join('')}</ul> <button class="enabled-btn">See Project</button> </div>`;
   work.appendChild(projectContainer);
 });
 
@@ -110,12 +126,14 @@ function popupDetailsWindow(index) {
 }
 
 const projectBtn = document.querySelectorAll('.project .enabled-btn');
-projectBtn.forEach((btn) => btn.addEventListener('click', () => {
-  popup.classList.add('active');
-  body.classList.add('active');
-  bg.classList.add('active');
-  popupDetailsWindow(Array.prototype.indexOf.call(projectBtn, btn));
-}));
+projectBtn.forEach((btn) =>
+  btn.addEventListener('click', () => {
+    popup.classList.add('active');
+    body.classList.add('active');
+    bg.classList.add('active');
+    popupDetailsWindow(Array.prototype.indexOf.call(projectBtn, btn));
+  })
+);
 
 close.addEventListener('click', () => {
   popup.classList.remove('active');
@@ -130,10 +148,11 @@ hamburger.addEventListener('click', () => {
   body.classList.toggle('active');
 });
 
-document.querySelectorAll('.mobile-nav-link').forEach((link) => link.addEventListener('click', () => {
-  headline.classList.remove('active');
-  hamburger.classList.remove('active');
-  navBar.classList.remove('active');
-  body.classList.remove('active');
-}));
-
+document.querySelectorAll('.mobile-nav-link').forEach((link) =>
+  link.addEventListener('click', () => {
+    headline.classList.remove('active');
+    hamburger.classList.remove('active');
+    navBar.classList.remove('active');
+    body.classList.remove('active');
+  })
+);
