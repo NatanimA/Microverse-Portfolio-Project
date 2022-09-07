@@ -85,7 +85,7 @@ header {
 }
 
 .proj-info {
-  width: 280px;
+  width: 250px;
   font-weight: 600;
   font-size: 13px;
   display: flex;
@@ -750,17 +750,30 @@ textarea::placeholder {
     margin-left: 16px;
   }
 
-  #popup-details {
+  #details {
     display: flex;
+    flex-direction: row;
+
   }
 
-  #popup-description {
-    width: 80%;
+  #pop-description {
+    width: 60%;
   }
 
   #popup-skills-buttons {
+    width: 306px;
+    height: 157px;
     padding-left: 20px;
+    margin-right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
   }
+
+    #popup-skills-buttons #buttons{
+      width: 306px;
+      padding: 0;
+    }
 
   .live-link {
     margin-left: 0;
@@ -774,6 +787,15 @@ textarea::placeholder {
   .proj-description {
     font-size: 16px;
     line-height: 24px;
+  }
+
+  #popup #content #details .proj-lang {
+    width: 306px;
+    height: auto;
+    margin-top: 0;
+    margin-right: 0;
+    row-gap: 5px;
+    align-self: flex-end;
   }
 
   #about {
