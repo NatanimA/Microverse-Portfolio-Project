@@ -1,4 +1,3 @@
-
 const hamburger = document.querySelector('#hamb');
 const navBar = document.querySelector('#mobile-navbar');
 const body = document.querySelector('body');
@@ -16,22 +15,19 @@ const popupDescription = document.querySelector('#pop-description');
 const liveLink = document.querySelector('.live-link');
 const sourceLink = document.querySelector('.source-link');
 const skillsList = document.querySelector('#popup-skills-buttons');
-const form = document.getElementById("form-wrapper");
-const error_msg = document.getElementById("error-msg");
+const form = document.getElementById('form-wrapper');
+const errorMsg = document.getElementById('error-msg');
+const email = document.querySelector('#email');
 
-form.addEventListener('submit',(event) => {
-    event.preventDefault();
-  if (event.target[1].value === event.target[1].value.toLowerCase()){
-        form.submit();
-    }
-    else {
-        email.classList.add('active');
-        error_msg.innerText = "Please Enter E-mail with lowercase like 'abcd@gmail.com'"
-
-    }
-
-}
-);
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  if (event.target[1].value === event.target[1].value.toLowerCase()) {
+    form.submit();
+  } else {
+    email.classList.add('active');
+    errorMsg.innerText = "Please Enter E-mail with lowercase like 'abcd@gmail.com'";
+  }
+});
 
 const projects = [
   {
@@ -136,4 +132,3 @@ document.querySelectorAll('.mobile-nav-link').forEach((link) => link.addEventLis
   navBar.classList.remove('active');
   body.classList.remove('active');
 }));
-
