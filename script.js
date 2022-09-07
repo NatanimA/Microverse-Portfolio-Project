@@ -10,7 +10,7 @@ const content = document.querySelector('#content h2');
 const popImg = document.querySelector('#pop-img');
 const popupProjType = document.querySelector('#content .proj-info .proj-type');
 const popupProjCompany = document.querySelector(
-  '#content .proj-info .proj-company'
+  '#content .proj-info .proj-company',
 );
 const popupProjYear = document.querySelector('#content .proj-info .proj-year');
 const popupDescription = document.querySelector('#pop-description');
@@ -20,7 +20,6 @@ const skillsList = document.querySelector('#popup-skills-buttons');
 const form = document.getElementById('form-wrapper');
 const errorMsg = document.getElementById('error-msg');
 const email = document.querySelector('#email');
-
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
@@ -127,14 +126,12 @@ function popupDetailsWindow(index) {
 }
 
 const projectBtn = document.querySelectorAll('.project .enabled-btn');
-projectBtn.forEach((btn) =>
-  btn.addEventListener('click', () => {
-    popup.classList.add('active');
-    body.classList.add('active');
-    bg.classList.add('active');
-    popupDetailsWindow(Array.prototype.indexOf.call(projectBtn, btn));
-  })
-);
+projectBtn.forEach((btn) => btn.addEventListener('click', () => {
+  popup.classList.add('active');
+  body.classList.add('active');
+  bg.classList.add('active');
+  popupDetailsWindow(Array.prototype.indexOf.call(projectBtn, btn));
+}));
 
 close.addEventListener('click', () => {
   popup.classList.remove('active');
@@ -149,12 +146,9 @@ hamburger.addEventListener('click', () => {
   body.classList.toggle('active');
 });
 
-document.querySelectorAll('.mobile-nav-link').forEach((link) =>
-  link.addEventListener('click', () => {
-    headline.classList.remove('active');
-    hamburger.classList.remove('active');
-    navBar.classList.remove('active');
-    body.classList.remove('active');
-  })
-);
-
+document.querySelectorAll('.mobile-nav-link').forEach((link) => link.addEventListener('click', () => {
+  headline.classList.remove('active');
+  hamburger.classList.remove('active');
+  navBar.classList.remove('active');
+  body.classList.remove('active');
+}));
