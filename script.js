@@ -3,7 +3,7 @@ const error_msg = document.getElementById("error-msg");
 
 form.addEventListener('submit',(event) => {
     event.preventDefault();
-    if(email.value === email.value.toLowerCase()){
+  if (event.target[1].value === event.target[1].value.toLowerCase()){
         form.submit();
     }
     else {
