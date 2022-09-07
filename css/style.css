@@ -61,12 +61,16 @@ header {
 }
 
 #error-msg {
-  font-size: 16px;
+  font-size: 10px;
+  height: auto;
   color: darkred;
   font-weight: 600;
-  margin-bottom: 20px;
   margin-top: 2px;
   align-self: flex-start;
+}
+
+small {
+  margin-left: 5%;
 }
 
 .social-links {
@@ -723,6 +727,15 @@ textarea::placeholder {
   textarea {
     resize: none;
   }
+
+    #error-msg {
+      font-size: 16px;
+      height: auto;
+      color: darkred;
+      font-weight: 600;
+      margin-top: 2px;
+      align-self: flex-start;
+    }
 
   #form-message-input {
     width: 450px;
