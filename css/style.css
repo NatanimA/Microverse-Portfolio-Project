@@ -12,10 +12,6 @@ body.active {
   display: inline;
 }
 
-.project-cards {
-  display: none;
-}
-
 header {
   position: fixed;
   top: 0;

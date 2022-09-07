@@ -70,8 +70,6 @@ projects.forEach((project) => {
   work.appendChild(projectContainer);
 });
 
-
-
 const ul = document.createElement('ul');
 ul.className = 'proj-lang';
 skillsList.prepend(ul);
