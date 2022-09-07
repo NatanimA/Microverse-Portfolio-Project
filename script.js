@@ -18,15 +18,14 @@ const liveLink = document.querySelector('.live-link');
 const sourceLink = document.querySelector('.source-link');
 const skillsList = document.querySelector('#popup-skills-buttons');
 const form = document.getElementById('form-wrapper');
-const error_msg = document.getElementById('error-msg');
+const errorMsg = document.getElementById('error-msg');
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
   if (event.target[1].value === event.target[1].value.toLowerCase()) {
     form.submit();
   } else {
-    email.classList.add('active');
-    error_msg.innerText =
+    errorMsg.innerText =
       "Please Enter E-mail with lowercase like 'abcd@gmail.com'";
   }
 });
