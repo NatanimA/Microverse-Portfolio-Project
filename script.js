@@ -65,10 +65,12 @@ const projects = [
 
 projects.forEach((project) => {
   const projectContainer = document.createElement('div');
-  projectContainer.className = 'project-cards';
-  projectContainer.innerHTML = `<img class="project-screenshot" src="${project.image}" alt="project screenshot"> <div class="project-div"> <h2 class="proj-title">${project.name}</h2> <p class="proj-info"> <span class="proj-company">${project.projCompany}</span> <span><img src="./assets/Counter.png" alt=" "></span> <span class="proj-type">${project.projtype}</span> <span><img src="./assets/Counter.png" alt=" "></span> <span class="proj-year">${project.projYear}</span> </p> <p class="proj-description">${project.description}</p> <ul class="proj-languages">${project.technologies.map((tech) => `<li class='language'>${tech}</li>`).join('')}</ul> <button class="enabled-btn">See Project</button> </div>`;
+  projectContainer.className = 'project';
+  projectContainer.innerHTML = `<img class="project-picture" src="${project.image}" alt="project screenshot"> <div class="proj-div"> <h2 class="proj-title">${project.name}</h2> <p class="proj-info"> <span class="proj-company">${project.projCompany}</span> <span><img src="./assets/Counter.png" alt=" "></span> <span class="proj-type">${project.projtype}</span> <span><img src="./assets/Counter.png" alt=" "></span> <span class="proj-year">${project.projYear}</span> </p> <p class="proj-description">${project.description}</p> <ul class="proj-lang">${project.technologies.map((tech) => `<li class='lang'>${tech}</li>`).join('')}</ul> <button class="enabled-btn">See Project</button> </div>`;
   work.appendChild(projectContainer);
 });
+
+
 
 const ul = document.createElement('ul');
 ul.className = 'proj-lang';
