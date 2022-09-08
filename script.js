@@ -20,16 +20,9 @@ const skillsList = document.querySelector('#popup-skills-buttons');
 const form = document.getElementById('form-wrapper');
 const errorMsg = document.getElementById('error-msg');
 const email = document.querySelector('#email');
-
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
-  if (event.target[1].value === event.target[1].value.toLowerCase()) {
-    form.submit();
-  } else {
-    email.classList.add('active');
-    errorMsg.innerText = "Please Enter E-mail with lowercase like 'abcd@gmail.com'";
-  }
-});
+const personName = document.querySelector('#name');
+const message = document.querySelector('#form-message-input');
+const storage = window.localStorage;
 
 const projects = [
   {
@@ -152,3 +145,86 @@ document.querySelectorAll('.mobile-nav-link').forEach((link) => link.addEventLis
   navBar.classList.remove('active');
   body.classList.remove('active');
 }));
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  if (event.target[1].value === event.target[1].value.toLowerCase()) {
+    form.submit();
+  } else {
+    email.classList.add('active');
+    errorMsg.innerText = "Please Enter E-mail with lowercase like 'abcd@gmail.com'";
+  }
+});
+
+const inputData = {
+  personName: '',
+  email: '',
+  message: '',
+};
+
+function storageAvailable(type) {
+  let storage;
+  try {
+    storage = window[type];
+    const x = '__storage_test__';
+    storage.setItem(x, x);
+    storage.removeItem(x);
+    return true;
+  } catch (e) {
+    const { code, name } = e;
+    return (
+      e instanceof DOMException
+      && (code === 22
+        || code === 1014
+        || name === 'QuotaExceededError'
+        || name === 'NS_ERROR_DOM_QUOTA_REACHED')
+      && storage.length !== 0
+    );
+  }
+}
+
+personName.addEventListener('change', () => {
+  inputData.personName = personName.value;
+  inputData.email = email.value;
+  inputData.message = message.value;
+  storage.setItem('formData', JSON.stringify(inputData));
+});
+
+email.addEventListener('change', () => {
+  inputData.email = email.value;
+  inputData.message = message.value;
+  storage.setItem('formData', JSON.stringify(inputData));
+});
+
+message.addEventListener('change', () => {
+  inputData.personName = personName.value;
+  inputData.email = email.value;
+  inputData.message = message.value;
+  storage.setItem('formData', JSON.stringify(inputData));
+});
+
+function retrieveForm() {
+  if (storageAvailable('localStorage')) {
+    const formDataInput = storage.getItem('formData');
+    const formData = JSON.parse(formDataInput);
+    return formData;
+  }
+  return null;
+}
+
+function populateFormData() {
+  const formData = retrieveForm();
+  if (formData) {
+    if (formData.personName) {
+      personName.value = formData.personName;
+    }
+    if (formData.email) {
+      email.value = formData.email;
+    }
+    if (formData.message) {
+      message.value = formData.message;
+    }
+  }
+}
+
+populateFormData();
