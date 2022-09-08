@@ -10,7 +10,7 @@ const content = document.querySelector('#content h2');
 const popImg = document.querySelector('#pop-img');
 const popupProjType = document.querySelector('#content .proj-info .proj-type');
 const popupProjCompany = document.querySelector(
-  '#content .proj-info .proj-company',
+  '#content .proj-info .proj-company'
 );
 const popupProjYear = document.querySelector('#content .proj-info .proj-year');
 const popupDescription = document.querySelector('#pop-description');
@@ -119,12 +119,14 @@ function popupDetailsWindow(index) {
 }
 
 const projectBtn = document.querySelectorAll('.project .enabled-btn');
-projectBtn.forEach((btn) => btn.addEventListener('click', () => {
-  popup.classList.add('active');
-  body.classList.add('active');
-  bg.classList.add('active');
-  popupDetailsWindow(Array.prototype.indexOf.call(projectBtn, btn));
-}));
+projectBtn.forEach((btn) =>
+  btn.addEventListener('click', () => {
+    popup.classList.add('active');
+    body.classList.add('active');
+    bg.classList.add('active');
+    popupDetailsWindow(Array.prototype.indexOf.call(projectBtn, btn));
+  })
+);
 
 close.addEventListener('click', () => {
   popup.classList.remove('active');
@@ -139,13 +141,14 @@ hamburger.addEventListener('click', () => {
   body.classList.toggle('active');
 });
 
-document.querySelectorAll('.mobile-nav-link').forEach((link) => link.addEventListener('click', () => {
-  headline.classList.remove('active');
-  hamburger.classList.remove('active');
-  navBar.classList.remove('active');
-  body.classList.remove('active');
-}));
-
+document.querySelectorAll('.mobile-nav-link').forEach((link) =>
+  link.addEventListener('click', () => {
+    headline.classList.remove('active');
+    hamburger.classList.remove('active');
+    navBar.classList.remove('active');
+    body.classList.remove('active');
+  })
+);
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
@@ -153,16 +156,16 @@ form.addEventListener('submit', (event) => {
     form.submit();
   } else {
     email.classList.add('active');
-    errorMsg.innerText = "Please Enter E-mail with lowercase like 'abcd@gmail.com'";
+    errorMsg.innerText =
+      "Please Enter E-mail with lowercase like 'abcd@gmail.com'";
   }
 });
 
 const inputData = {
-  personName : "",
-  email: "",
-  message:""
+  personName: '',
+  email: '',
+  message: '',
 };
-
 
 function storageAvailable(type) {
   let storage;
@@ -172,14 +175,17 @@ function storageAvailable(type) {
     storage.setItem(x, x);
     storage.removeItem(x);
     return true;
-  }
-  catch (e) {
-    return e instanceof DOMException && (
-      e.code === 22 ||
-      e.code === 1014 ||
-      e.name === 'QuotaExceededError' ||
-      e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
-      (storage && storage.length !== 0);
+  } catch (e) {
+    let { code, name } = e;
+    return (
+      e instanceof DOMException &&
+      (code === 22 ||
+        code === 1014 ||
+        name === 'QuotaExceededError' ||
+        name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
+      storage &&
+      storage.length !== 0
+    );
   }
 }
 
@@ -196,7 +202,6 @@ email.addEventListener('change', function () {
   storage.setItem('formData', JSON.stringify(inputData));
 });
 
-
 message.addEventListener('change', function () {
   inputData.personName = personName.value;
   inputData.email = email.value;
@@ -209,8 +214,7 @@ function retrieveForm() {
     const formDataInput = storage.getItem('formData');
     const formData = JSON.parse(formDataInput);
     return formData;
-  }
-  else {
+  } else {
     return false;
   }
 }
@@ -231,11 +235,3 @@ function populateFormData() {
 }
 
 populateFormData();
-
-
-
-
-
-
-
-
