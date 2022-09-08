@@ -10,7 +10,7 @@ const content = document.querySelector('#content h2');
 const popImg = document.querySelector('#pop-img');
 const popupProjType = document.querySelector('#content .proj-info .proj-type');
 const popupProjCompany = document.querySelector(
-  '#content .proj-info .proj-company'
+  '#content .proj-info .proj-company',
 );
 const popupProjYear = document.querySelector('#content .proj-info .proj-year');
 const popupDescription = document.querySelector('#pop-description');
@@ -125,7 +125,7 @@ projectBtn.forEach((btn) =>
     body.classList.add('active');
     bg.classList.add('active');
     popupDetailsWindow(Array.prototype.indexOf.call(projectBtn, btn));
-  })
+  }),
 );
 
 close.addEventListener('click', () => {
@@ -147,7 +147,7 @@ document.querySelectorAll('.mobile-nav-link').forEach((link) =>
     hamburger.classList.remove('active');
     navBar.classList.remove('active');
     body.classList.remove('active');
-  })
+  }),
 );
 
 form.addEventListener('submit', (event) => {
@@ -176,15 +176,14 @@ function storageAvailable(type) {
     storage.removeItem(x);
     return true;
   } catch (e) {
-    let { code, name } = e;
+    const { code, name } = e;
     return (
-      e instanceof DOMException &&
-      (code === 22 ||
-        code === 1014 ||
-        name === 'QuotaExceededError' ||
-        name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
-      storage &&
-      storage.length !== 0
+      e instanceof DOMException
+        && (code === 22
+          || code === 1014
+          || name === 'QuotaExceededError'
+          || name === 'NS_ERROR_DOM_QUOTA_REACHED')
+        && storage.length !== 0
     );
   }
 }
