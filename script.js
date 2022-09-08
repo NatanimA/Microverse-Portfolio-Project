@@ -189,20 +189,20 @@ function storageAvailable(type) {
   }
 }
 
-personName.addEventListener('change', function () {
+personName.addEventListener('change', () => {
   inputData.personName = personName.value;
   inputData.email = email.value;
   inputData.message = message.value;
   storage.setItem('formData', JSON.stringify(inputData));
 });
 
-email.addEventListener('change', function () {
+email.addEventListener('change', () => {
   inputData.email = email.value;
   inputData.message = message.value;
   storage.setItem('formData', JSON.stringify(inputData));
 });
 
-message.addEventListener('change', function () {
+message.addEventListener('change', () => {
   inputData.personName = personName.value;
   inputData.email = email.value;
   inputData.message = message.value;
@@ -214,8 +214,6 @@ function retrieveForm() {
     const formDataInput = storage.getItem('formData');
     const formData = JSON.parse(formDataInput);
     return formData;
-  } else {
-    return false;
   }
 }
 
