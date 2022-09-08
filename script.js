@@ -119,14 +119,12 @@ function popupDetailsWindow(index) {
 }
 
 const projectBtn = document.querySelectorAll('.project .enabled-btn');
-projectBtn.forEach((btn) =>
-  btn.addEventListener('click', () => {
-    popup.classList.add('active');
-    body.classList.add('active');
-    bg.classList.add('active');
-    popupDetailsWindow(Array.prototype.indexOf.call(projectBtn, btn));
-  }),
-);
+projectBtn.forEach((btn) => btn.addEventListener('click', () => {
+  popup.classList.add('active');
+  body.classList.add('active');
+  bg.classList.add('active');
+  popupDetailsWindow(Array.prototype.indexOf.call(projectBtn, btn));
+}));
 
 close.addEventListener('click', () => {
   popup.classList.remove('active');
@@ -141,14 +139,12 @@ hamburger.addEventListener('click', () => {
   body.classList.toggle('active');
 });
 
-document.querySelectorAll('.mobile-nav-link').forEach((link) =>
-  link.addEventListener('click', () => {
-    headline.classList.remove('active');
-    hamburger.classList.remove('active');
-    navBar.classList.remove('active');
-    body.classList.remove('active');
-  }),
-);
+document.querySelectorAll('.mobile-nav-link').forEach((link) => link.addEventListener('click', () => {
+  headline.classList.remove('active');
+  hamburger.classList.remove('active');
+  navBar.classList.remove('active');
+  body.classList.remove('active');
+}));
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
@@ -156,8 +152,7 @@ form.addEventListener('submit', (event) => {
     form.submit();
   } else {
     email.classList.add('active');
-    errorMsg.innerText =
-      "Please Enter E-mail with lowercase like 'abcd@gmail.com'";
+    errorMsg.innerText = "Please Enter E-mail with lowercase like 'abcd@gmail.com'";
   }
 });
 
@@ -179,11 +174,11 @@ function storageAvailable(type) {
     const { code, name } = e;
     return (
       e instanceof DOMException
-        && (code === 22
-          || code === 1014
-          || name === 'QuotaExceededError'
-          || name === 'NS_ERROR_DOM_QUOTA_REACHED')
-        && storage.length !== 0
+      && (code === 22
+        || code === 1014
+        || name === 'QuotaExceededError'
+        || name === 'NS_ERROR_DOM_QUOTA_REACHED')
+      && storage.length !== 0
     );
   }
 }
@@ -214,6 +209,7 @@ function retrieveForm() {
     const formData = JSON.parse(formDataInput);
     return formData;
   }
+  return null;
 }
 
 function populateFormData() {
