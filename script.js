@@ -158,7 +158,7 @@ form.addEventListener('submit', (event) => {
 });
 
 const inputData = {
-  personName : "",
+  name : "",
   email: "",
   message:""
 };
@@ -192,7 +192,7 @@ personName.addEventListener('change', function () {
 
 email.addEventListener('change', function () {
   inputData.email = email.value;
-  inputData.message = message.value;
+  inputData.message = message;
   storage.setItem('formData', JSON.stringify(inputData));
 });
 
@@ -205,7 +205,7 @@ message.addEventListener('change', function () {
 });
 
 function retrieveForm() {
-  if (storageAvailable('localStorage')) {
+  if (storageAvailable(localStorage)) {
     const formDataInput = storage.getItem('formData');
     const formData = JSON.parse(formDataInput);
     return formData;
